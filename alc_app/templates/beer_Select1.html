@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .slidecontainer {
+          width: 50%;
+          text-align: center;
+        }
+        
+        .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 25px;
+          background: #2b2a29;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+        }
+        
+        .slider:hover {
+          opacity: 1;
+        }
+        
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          background: #ffd930;
+          cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          background: #eeea0f;
+          cursor: pointer;
+        }
+        </style>
+
+<body>
+    <h1>Select Your Beer</h1>
+    <p>Drag the slider to set your preferences.</p>
+
+    <div class="slidecontainer">
+        <h4>Alcohol</h4>
+        <input type="range" min="4" max="12" value="4" step = "4" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+        <h4>Bitterness</h4>
+        <input type="range" min="0" max="80" value="0" step = "5" class="slider" id="myRange">
+        <p>Value: <span id = "demo" ></span></p>
+        <h4>Fizziness</h4>
+        <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+        <h4>Original Gravity</h4>
+        <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+
+        <a href="{% url 'directHome' %}" >Find My Beer</a>
+    </div>
+
+    <script>
+        const slider = document.getElementById("myRange");
+        const output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+</head>
+
+</html>
