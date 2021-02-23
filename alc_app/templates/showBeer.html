@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <title>Beer Show</title>
+  <h1><strong></strong></h1>
+</head>
+
+
+<body>
+  <div class="container">
+    <ul id="autoWidth" class="cS-hidden">
+
+      <!---------BEER ITEM 1-------->
+      <li class="item-a">
+        <div class="box" >
+          <input type="hidden" name="beerSelected" value="{{beerselected}}"></input>
+
+          <p class ="beeritem" > {{beerSelected}}</option>
+
+          <p class="beeritem">Blonde Ale</p>
+
+          <img src="{% static 'img/1.jpg' %}" class="model">
+          <p>
+            <strong>Origin: </strong> US <br>
+            <strong>ABV: </strong> 4.1% - 5.1% <br>
+            <strong>OG: </strong> 1.045 - 1.054 <br>
+            <strong>FG: </strong> 1.008 - 1.016 <br>
+            <strong>IBU: </strong> 15 - 25 <br>
+            <strong>CO2: </strong> 2 - 2.5 <br>
+            <strong>Apparent Attenuation: </strong> 71 - 82
+          </p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</body>
+
+</html>

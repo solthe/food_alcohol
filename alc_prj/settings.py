@@ -125,3 +125,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'alc_app/static'),
 
 ]
+

@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 app_name = 'alc_app'
 urlpatterns = [
     path('', views.direct_home, name='directHome'),
-    path('alc_app/', views.beer_select, name='beerSelect'),
+    path('alc_app/', views.beer_info, name='beerSelect'),
+    path('templates/', views.show_beer, name='showBeer'),
 
 
 ] 
